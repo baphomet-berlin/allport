@@ -6,5 +6,6 @@ module Allport
     validates :first_name, uniqueness: { scope: [:middle_name, :last_name] }
     validates :email, uniqueness: true
     belongs_to :contactable, polymorphic: true
+    has_many :phone_numbers
   end
 end
