@@ -11,15 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310002533) do
+ActiveRecord::Schema.define(version: 20160310012110) do
 
   create_table "allport_contacts", force: :cascade do |t|
     t.string   "first_name"
     t.string   "middle_name"
     t.string   "last_name"
     t.string   "email"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "contactable_id"
+    t.string   "contactable_type"
   end
+
+  add_index "allport_contacts", ["contactable_type", "contactable_id"], name: "index_allport_contacts_on_contactable_type_and_contactable_id"
 
 end
