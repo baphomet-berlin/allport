@@ -4,7 +4,7 @@ class CreateAllportPhoneNumbers < ActiveRecord::Migration
       t.string :prefix
       t.string :number
       t.references :country, index: true, foreign_key: true
-      t.references :contact, index: true, foreign_key: true
+      t.references :allport_contact, index: true, foreign_key: true
 
       t.timestamps null: false
     end

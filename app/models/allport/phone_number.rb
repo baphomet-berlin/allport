@@ -13,7 +13,6 @@ module Allport
     def split_number
       if (self.number and self.errors[:number].empty?)
         split_number = Phony.split(self.number.gsub(/\D/, ''))
-        self.prefix = split_number.shift
         self.number = split_number.join
       end
     end

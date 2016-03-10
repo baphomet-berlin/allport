@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310155130) do
+ActiveRecord::Schema.define(version: 20160310171255) do
 
   create_table "allport_contacts", force: :cascade do |t|
     t.string   "first_name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20160310155130) do
     t.integer  "contact_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "label"
   end
 
   add_index "allport_phone_numbers", ["contact_id"], name: "index_allport_phone_numbers_on_contact_id"
