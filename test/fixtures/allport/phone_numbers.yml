@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  prefix: MyString
-  number: MyString
+  prefix: +49
+  number: 183647409
   country_id: 
   contact_id: 
 
 two:
-  prefix: MyString
-  number: MyString
+  prefix: +44
+  number: 22234566
   country_id: 
   contact_id: 
