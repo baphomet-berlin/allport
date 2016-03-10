@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["cbrandolino@gmail.com"]
   s.homepage    = "https://github.com/baphomet-berlin/allport"
   s.summary     = "A Rails engine for contact management"
-  s.description = "TODO: Description of Allport."
+  s.description = "A Rails engine for contact management"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
