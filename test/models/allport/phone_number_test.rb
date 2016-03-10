@@ -15,5 +15,13 @@ module Allport
       assert @phone.save,
         "Save with a valid :number"
     end
+    test "Number splitting" do
+      @phone.number = "+49302724649"
+      @phone.validate
+      assert_equal @phone.prefix, '49',
+        "lala"
+      assert_equal @phone.number, '302724649',
+        ":prefix and :number correctly split when number is valid"
+    end
   end
 end

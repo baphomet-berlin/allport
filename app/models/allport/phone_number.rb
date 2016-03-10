@@ -6,12 +6,16 @@ module Allport
     belongs_to :contact
     validates_plausible_phone :number, presence: true
     phony_normalize :number, default_country_code: 'US'
-    after_validate :split_number
+    after_validation :split_number
+
+    private
 
     def split_number
-      split_number = Phony.split(self.number.gsub(/\D/, ''))
-      self.prefix = split_number.shift
-      self.number = split_number.join
+      if (self.number and self.errors[:number].empty?)
+        split_number = Phony.split(self.number.gsub(/\D/, ''))
+        self.prefix = split_number.shift
+        self.number = split_number.join
+      end
     end
   end
 end
