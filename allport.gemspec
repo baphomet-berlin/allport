@@ -6,11 +6,11 @@ require "allport/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "allport"
-  s.version     = Allport::VERSION
-  s.authors     = [""]
+  s.version     = "0.1.0"
+  s.authors     = ["Claudio Brandolino"]
   s.email       = ["cbrandolino@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Allport."
+  s.homepage    = "https://github.com/baphomet-berlin/allport"
+  s.summary     = "A Rails engine for contact management"
   s.description = "TODO: Description of Allport."
   s.license     = "MIT"
 
