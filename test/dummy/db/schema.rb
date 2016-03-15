@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310012110) do
+ActiveRecord::Schema.define(version: 20160310171255) do
 
   create_table "allport_contacts", force: :cascade do |t|
     t.string   "first_name"
@@ -25,5 +25,22 @@ ActiveRecord::Schema.define(version: 20160310012110) do
   end
 
   add_index "allport_contacts", ["contactable_type", "contactable_id"], name: "index_allport_contacts_on_contactable_type_and_contactable_id"
+
+  create_table "allport_phone_numbers", force: :cascade do |t|
+    t.string   "prefix"
+    t.string   "number"
+    t.integer  "country_id"
+    t.integer  "contact_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "label"
+  end
+
+  add_index "allport_phone_numbers", ["contact_id"], name: "index_allport_phone_numbers_on_contact_id"
+  add_index "allport_phone_numbers", ["country_id"], name: "index_allport_phone_numbers_on_country_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+  end
 
 end
