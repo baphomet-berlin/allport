@@ -6,5 +6,10 @@ module Allport
     validates :first_name, uniqueness: { scope: [:middle_name, :last_name] }
     validates :email, uniqueness: true
     belongs_to :contactable, polymorphic: true
+
+    if self.method_defined? :rails_admin
+      rails_admin do
+      end
+    end
   end
 end
