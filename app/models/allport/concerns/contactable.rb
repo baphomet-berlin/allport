@@ -7,11 +7,6 @@ module Allport
         accepts_nested_attributes_for :contact
         after_initialize :hook_contact
 
-        if self.method_defined? :rails_admin
-          rails_admin do
-          end
-        end
-
         private
 
         def hook_contact

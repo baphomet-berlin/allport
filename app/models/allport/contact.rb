@@ -7,9 +7,5 @@ module Allport
     validates :email, uniqueness: true
     belongs_to :contactable, polymorphic: true
 
-    if self.method_defined? :rails_admin
-      rails_admin do
-      end
-    end
   end
 end
