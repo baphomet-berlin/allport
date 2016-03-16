@@ -1,4 +1,4 @@
-require_relative '../generator.rb'
+require_relative '../generator_helper.rb'
 require 'rails/generators/active_record'
 
 class Allport::ContactGenerator < ActiveRecord::Generators::Base
