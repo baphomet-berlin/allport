@@ -1,6 +1,8 @@
 require_relative '../generator.rb'
+require 'rails/generators/active_record'
 
-class Allport::ContactGenerator < Allport::Generator
+class Allport::ContactGenerator < ActiveRecord::Generators::Base
+  include Allport::GeneratorHelper
 
   desc "Create a migration to add contactable-specific fields to your model. " +
        "The NAME argument is the name of your model"
