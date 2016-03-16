@@ -10,7 +10,7 @@ class Allport::ContactGenerator < Allport::Generator
   end
 
   def generate_migration
-    self.migration_template "contactable_migration.rb.erb", "db/migrate/#{migration_file_name}"
+    copy_migration "contactable_migration.rb.erb", "#{migration_file_name}"
   end
 
   def migration_name
