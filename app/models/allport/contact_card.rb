@@ -1,5 +1,5 @@
 module Allport
-  class Contact < ActiveRecord::Base
+  class ContactCard < ActiveRecord::Base
     belongs_to :contactable, polymorphic: true
   end
 end

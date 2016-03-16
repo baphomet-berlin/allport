@@ -2,6 +2,7 @@ require 'test_helper'
 
 module Allport
   class Contact_Card_Test < ActiveSupport::TestCase
+
   #   test "Basic validation" do
   #     contact = Contact.new first_name: 'Claudio', email: 'cbrandolino@gmail.com'
   #     assert_not contact.save, 

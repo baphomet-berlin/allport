@@ -10,14 +10,6 @@ class Allport::ContactGenerator < Allport::Generator
   end
 
   def generate_migration
-    copy_migration "contactable_migration.rb.erb", "#{migration_file_name}"
-  end
-
-  def migration_name
-    "add_allport_contact_to_#{name.underscore.pluralize}"
-  end
-
-  def migration_file_name
-    "#{migration_name}.rb"
+    copy_migration "contactable_migration.rb.erb", "add_allport_contact_to_#{name.underscore.pluralize}"
   end
 end
