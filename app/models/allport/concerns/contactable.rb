@@ -5,7 +5,6 @@ module Allport
 
       included do
         has_one :contact_card, as: :contactable, class_name: 'Allport::ContactCard'
-        after_initialize :hook_contact_card
         validates :first_name, presence: true
         validates :last_name, presence: true
         validates :email, presence: true
