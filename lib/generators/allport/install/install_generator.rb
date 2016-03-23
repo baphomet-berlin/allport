@@ -10,6 +10,6 @@ class Allport::InstallGenerator < Rails::Generators::Base
   end
 
   def copy_initializer
-    template "initializer.rb.erb", "config/initializer/allport.rb"
+    template "initializer.rb.erb", "config/initializers/allport.rb"
   end 
 end
