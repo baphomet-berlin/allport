@@ -1,7 +1,12 @@
 require 'test_helper'
+require 'rake'
 
 module Allport
   class ContactableTest < ActiveSupport::TestCase
+
+    setup do
+    end
+
 
     test "Basic validation" do
       contact = User.new first_name: 'Claudio', email: 'cbrandolino@gmail.com'

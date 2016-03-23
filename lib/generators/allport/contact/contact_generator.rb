@@ -14,4 +14,5 @@ class Allport::ContactGenerator < ActiveRecord::Generators::Base
   def generate_migration
     copy_migration "contactable_migration.rb.erb", "add_allport_contact_to_#{name.underscore.pluralize}"
   end
+
 end

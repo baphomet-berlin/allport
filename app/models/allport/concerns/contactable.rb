@@ -9,7 +9,9 @@ module Allport
         validates :last_name, presence: true
         validates :email, presence: true
         validates :first_name, uniqueness: { scope: [:middle_name, :last_name] }
-        validates :email, uniqueness: true
+        if Allport.admin_gem == :rails_admin
+          validates :email, uniqueness: true
+        end
 
         private
 
